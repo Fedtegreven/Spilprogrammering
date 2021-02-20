@@ -48,7 +48,7 @@ namespace Guesser
 
             string correctName;
             string[] names = {"Bob", "Henry", "Anne", "Anna", "Eric", "Marco", "Sofie", "Jakob", "John", "Sally"};
-            return correctName = names[random.Next(0,10)];
+            return correctName = names[random.Next(0,names.Length)];
         }
 
 
