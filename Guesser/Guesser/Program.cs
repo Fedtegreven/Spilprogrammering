@@ -17,9 +17,14 @@ namespace Guesser
             {
                 Console.WriteLine("Guess a Name");
                 Console.WriteLine("Write you guess and press enter");
-                Console.WriteLine("You have: "+ (triesLeft - tries) + " tries left \n");
+                Console.WriteLine("You have: "+ (triesLeft - tries) + " tries left");
+                Console.WriteLine("If you want to quit press Q\n");
 
                 string guess = Console.ReadLine();
+                
+                tries++;
+
+                if (guess.Equals("q", StringComparison.OrdinalIgnoreCase)) Environment.Exit(0);
 
                 if (correctGuess.Equals(guess, StringComparison.OrdinalIgnoreCase))
                 {
@@ -29,7 +34,7 @@ namespace Guesser
              
                 else
                 {
-                    tries++;
+                    
                     Console.WriteLine("Sorry wrong guess... :( \nPlease try again\n");
                 }
 
