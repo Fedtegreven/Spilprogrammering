@@ -11,3 +11,16 @@ C:\Users\Jakob\source\repos\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.cspr
 C:\Users\Jakob\source\repos\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.dll
 C:\Users\Jakob\source\repos\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.pdb
 C:\Users\Jakob\source\repos\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.genruntimeconfig.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.exe
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.deps.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.runtimeconfig.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.runtimeconfig.dev.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\bin\Debug\netcoreapp3.1\Guesser.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.csprojAssemblyReference.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.AssemblyInfoInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.AssemblyInfo.cs
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Guesser\Guesser\obj\Debug\netcoreapp3.1\Guesser.genruntimeconfig.cache

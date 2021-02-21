@@ -17,28 +17,29 @@ namespace Guesser
             {
                 Console.WriteLine("Guess a Name");
                 Console.WriteLine("Write you guess and press enter");
-                Console.WriteLine("You have: "+ (triesLeft - tries) + " tries left");
+                Console.WriteLine("You have: "+ (triesLeft - tries) + " tries left \n");
 
                 string guess = Console.ReadLine();
 
                 if (correctGuess.Equals(guess, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("Congratulations you guessed correctly on you " + tries + " try!!!:D");
+                    Console.WriteLine("Congratulations you guessed correctly on your " + (tries+1) + ". try!!!:D");  
                     running = false;
                 }
              
                 else
                 {
                     tries++;
-                    Console.WriteLine("Sorry wrong guess... :(");
+                    Console.WriteLine("Sorry wrong guess... :( \nPlease try again\n");
                 }
 
                 if (tries == triesLeft)
                 {
-                    Console.WriteLine("You have used up all your tries.... bye bye :(");
+                    Console.WriteLine("You have used up all your tries.... \nThe right name was: "+ correctGuess +" better luck next time :(");
                     running = false;
                 }
-
+                
+                hint(tries,correctGuess);
             }
         }
 
@@ -51,6 +52,13 @@ namespace Guesser
             return correctName = names[random.Next(0,names.Length)];
         }
 
-
+        static void hint(int attempt, string correct)
+        {
+            if (attempt == 5)
+            {
+                string hint = correct.Substring(0, 1);
+                Console.WriteLine("Here is a hint, the first letter is: " + hint + "\n");
+            }
+        }
     }
 }

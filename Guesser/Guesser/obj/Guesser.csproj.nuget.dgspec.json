@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jakob\\source\\repos\\Guesser\\Guesser\\Guesser.csproj": {}
+    "C:\\Users\\Jakob\\Documents\\GitHub\\Spilprogrammering\\Guesser\\Guesser\\Guesser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jakob\\source\\repos\\Guesser\\Guesser\\Guesser.csproj": {
+    "C:\\Users\\Jakob\\Documents\\GitHub\\Spilprogrammering\\Guesser\\Guesser\\Guesser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jakob\\source\\repos\\Guesser\\Guesser\\Guesser.csproj",
+        "projectUniqueName": "C:\\Users\\Jakob\\Documents\\GitHub\\Spilprogrammering\\Guesser\\Guesser\\Guesser.csproj",
         "projectName": "Guesser",
-        "projectPath": "C:\\Users\\Jakob\\source\\repos\\Guesser\\Guesser\\Guesser.csproj",
+        "projectPath": "C:\\Users\\Jakob\\Documents\\GitHub\\Spilprogrammering\\Guesser\\Guesser\\Guesser.csproj",
         "packagesPath": "C:\\Users\\Jakob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jakob\\source\\repos\\Guesser\\Guesser\\obj\\",
+        "outputPath": "C:\\Users\\Jakob\\Documents\\GitHub\\Spilprogrammering\\Guesser\\Guesser\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
