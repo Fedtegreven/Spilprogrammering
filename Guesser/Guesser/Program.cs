@@ -15,16 +15,17 @@ namespace Guesser
 
             while (running)
             {
+                hint(tries, correctGuess);
                 Console.WriteLine("Guess a Name");
                 Console.WriteLine("Write you guess and press enter");
                 Console.WriteLine("You have: "+ (triesLeft - tries) + " tries left");
                 Console.WriteLine("If you want to quit press Q\n");
 
                 string guess = Console.ReadLine();
-                
-                tries++;
 
                 if (guess.Equals("q", StringComparison.OrdinalIgnoreCase)) Environment.Exit(0);
+
+                tries++;
 
                 if (correctGuess.Equals(guess, StringComparison.OrdinalIgnoreCase))
                 {
@@ -33,8 +34,7 @@ namespace Guesser
                 }
              
                 else
-                {
-                    
+                {  
                     Console.WriteLine("Sorry wrong guess... :( \nPlease try again\n");
                 }
 
@@ -43,8 +43,6 @@ namespace Guesser
                     Console.WriteLine("You have used up all your tries.... \nThe right name was: "+ correctGuess +" better luck next time :(");
                     running = false;
                 }
-                
-                hint(tries,correctGuess);
             }
         }
 
@@ -62,7 +60,7 @@ namespace Guesser
             if (attempt == 5)
             {
                 string hint = correct.Substring(0, 1);
-                Console.WriteLine("Here is a hint, the first letter is: " + hint + "\n");
+                Console.WriteLine("Hint!!! The first letter is: ".ToUpper() + hint);
             }
         }
     }
