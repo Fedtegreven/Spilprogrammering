@@ -15,7 +15,7 @@ namespace Guesser
 
             while (running)
             {
-                //call the hint message 
+                //call the hint method 
                 hint(tries, correctGuess);
                 //mesages printed in the beginning
                 Console.WriteLine("Guess a Name");
@@ -26,7 +26,7 @@ namespace Guesser
                 string guess = Console.ReadLine();
                 //if the user wants to quit early, disregard upper and lower cases
                 if (guess.Equals("q", StringComparison.OrdinalIgnoreCase)) Environment.Exit(0);
-                //increment the tries variable with one every time a userinput is entered
+                //increment the tries variable with one for every loop
                 tries++;
                 //if the guess is correct print a message, disregard upper and lower cases in the guess
                 if (correctGuess.Equals(guess, StringComparison.OrdinalIgnoreCase))
