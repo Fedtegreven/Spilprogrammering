@@ -1,0 +1,13 @@
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.exe
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.deps.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.runtimeconfig.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.runtimeconfig.dev.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\bin\Debug\netcoreapp3.1\Zork2021.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.csprojAssemblyReference.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.AssemblyInfoInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.AssemblyInfo.cs
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\Zork2021\Zork2021\obj\Debug\netcoreapp3.1\Zork2021.genruntimeconfig.cache
