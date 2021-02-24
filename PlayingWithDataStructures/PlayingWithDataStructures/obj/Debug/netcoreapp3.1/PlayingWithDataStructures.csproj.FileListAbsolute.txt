@@ -1,0 +1,13 @@
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.exe
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.deps.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.runtimeconfig.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.runtimeconfig.dev.json
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\bin\Debug\netcoreapp3.1\PlayingWithDataStructures.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.csprojAssemblyReference.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.AssemblyInfoInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.AssemblyInfo.cs
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.dll
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.pdb
+C:\Users\Jakob\Documents\GitHub\Spilprogrammering\PlayingWithDataStructures\PlayingWithDataStructures\obj\Debug\netcoreapp3.1\PlayingWithDataStructures.genruntimeconfig.cache
