@@ -20,10 +20,8 @@ namespace PlayingWithDataStructures
             for (int i = 0; i < values.Length; i++)
             {
                 Console.WriteLine("Element - {0}",i);
-   
-                   values[i] = Convert.ToInt32(Console.ReadLine());
+                values[i] = Convert.ToInt32(Console.ReadLine());
             }
-
         }
 
         static void DisplayValues()
