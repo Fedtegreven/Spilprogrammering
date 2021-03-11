@@ -60,9 +60,29 @@ namespace Pokemon
 
                         //READ INPUT, REMEMBER IT SHOULD BE TWO POKEMON NAMES
                         string input = Console.ReadLine();
+                        
                         //BE SURE TO CHECK THE POKEMON NAMES THE USER WROTE ARE VALID (IN THE ROSTER) AND IF THEY ARE IN FACT 2!
                         Pokemon player = null;
                         Pokemon enemy = null;
+
+                        foreach (Pokemon pokemon in roster)
+                        {
+                            if (pokemon.Name.Contains(input))
+                            {
+                                player = pokemon;
+                            }
+                            else Console.WriteLine("Please check the list for a valid pokemon");
+                        }
+
+                        string input2 = Console.ReadLine();
+
+                        foreach (Pokemon pokemon in roster)
+                        {
+                            if(input2 == pokemon.Name)
+                            {
+                                enemy = pokemon;
+                            }
+                        }
 
                         //if everything is fine and we have 2 pokemons let's make them fight
                         if (player != null && enemy != null && player != enemy)
@@ -74,13 +94,11 @@ namespace Pokemon
                             while (player.Hp > 0 && enemy.Hp > 0)
                             {
                                 //PRINT POSSIBLE MOVES //FIIIIIIIIIIIIIIIIIIIIIIIIXXXXXX
-                                foreach (Pokemon pokemon in roster)
-                                {
-                                    foreach (Move moves in pokemon.Moves)
+                                foreach (Move moves in player.Moves)
                                     {
                                         Console.WriteLine(moves.Name);
                                     }
-                                }
+                                
                                 Console.Write("What move should we use? (");
 
                                 //GET USER ANSWER, BE SURE TO CHECK IF IT'S A VALID MOVE, OTHERWISE ASK AGAIN
