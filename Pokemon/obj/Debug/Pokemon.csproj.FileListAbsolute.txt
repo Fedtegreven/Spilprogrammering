@@ -15,3 +15,11 @@ C:\Users\Jakob\Desktop\Pokemon\obj\Debug\Pokemon.csproj.CoreCompileInputs.cache
 C:\Users\Jakob\Desktop\Pokemon\obj\Debug\Pokemon.csproj.CopyComplete
 C:\Users\Jakob\Desktop\Pokemon\obj\Debug\Pokemon.exe
 C:\Users\Jakob\Desktop\Pokemon\obj\Debug\Pokemon.pdb
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\bin\Debug\Pokemon.exe.config
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\bin\Debug\Pokemon.exe
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\bin\Debug\Pokemon.pdb
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\obj\Debug\Pokemon.csprojAssemblyReference.cache
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\obj\Debug\Pokemon.csproj.CopyComplete
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\obj\Debug\Pokemon.exe
+C:\Users\bbook\Documents\GitHub\Spilprogrammering\Pokemon\obj\Debug\Pokemon.pdb
