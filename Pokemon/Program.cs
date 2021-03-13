@@ -34,9 +34,8 @@ namespace Pokemon
             roster.Add(charmander);
             roster.Add(squirtle);
             roster.Add(bulbasaur);
-          
 
-            // INITIALIZE YOUR THREE POKEMONS HERE ** 
+            // INITIALIZE YOUR THREE POKEMONS HERE ** DONE
 
             Console.WriteLine("Welcome to the world of Pokemon!\nThe available commands are list/fight/heal/quit");
 
@@ -46,7 +45,7 @@ namespace Pokemon
                 switch (Console.ReadLine())
                 {
                     case "list":
-                        // PRINT THE POKEMONS IN THE ROSTER HERE **
+                        // PRINT THE POKEMONS IN THE ROSTER HERE ** DONE
                         Console.WriteLine("The roster of pokemon includes the following: ");
                         foreach (Pokemon pokemon in roster)
                         {
@@ -55,34 +54,50 @@ namespace Pokemon
                         break;
 
                     case "fight":
-                        //PRINT INSTRUCTIONS AND POSSIBLE POKEMONS (SEE SLIDES FOR EXAMPLE OF EXECUTION)
-                        Console.Write("Choose who should fight(");
+                        //PRINT INSTRUCTIONS AND POSSIBLE POKEMONS (SEE SLIDES FOR EXAMPLE OF EXECUTION) ** DONE
+                        Console.WriteLine("Write like this:YourPokemon EnemyPokemon");
+                        Console.Write("Choose who should fight:\n" );
+                        for (int i = 0; i < roster.Count; i++)
+                        {
+                            Console.WriteLine("- " + roster[i].Name);
+                        }
 
                         //READ INPUT, REMEMBER IT SHOULD BE TWO POKEMON NAMES
-                        string input = Console.ReadLine();
-                        
-                        //BE SURE TO CHECK THE POKEMON NAMES THE USER WROTE ARE VALID (IN THE ROSTER) AND IF THEY ARE IN FACT 2!
+
+
+                        ///*******************************************************************//
+                        //BE SURE TO CHECK THE POKEMON NAMES THE USER WROTE ARE VALID (IN THE ROSTER) AND IF THEY ARE IN FACT 2! ** DONE
                         Pokemon player = null;
                         Pokemon enemy = null;
 
-                        foreach (Pokemon pokemon in roster)
+                        bool enemyChosen = false;
+                        bool playerChosen = false;
+                        do
                         {
-                            if (pokemon.Name.Contains(input))
+                            string input = Console.ReadLine();
+                            string[] splittetInput = input.Split(' ');
+                            if (splittetInput.Length == 2)
                             {
-                                player = pokemon;
+                                for (int i = 0; i < roster.Count; i++)
+                                {
+                                    if (splittetInput[0].Equals(roster[i].Name, StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        player = roster[i];
+                                        playerChosen = true;
+                                    }
+                                    if (splittetInput[1].Equals(roster[i].Name, StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        enemy = roster[i];
+                                        enemyChosen = true;
+                                    }
+                                }
                             }
-                            else Console.WriteLine("Please check the list for a valid pokemon");
                         }
 
-                        string input2 = Console.ReadLine();
+                        while (!enemyChosen && !playerChosen);
+                        // Test
+                        Console.WriteLine("Player: " +player.Name + "\nEnemy: "+enemy.Name);
 
-                        foreach (Pokemon pokemon in roster)
-                        {
-                            if(input2 == pokemon.Name)
-                            {
-                                enemy = pokemon;
-                            }
-                        }
 
                         //if everything is fine and we have 2 pokemons let's make them fight
                         if (player != null && enemy != null && player != enemy)
@@ -93,22 +108,50 @@ namespace Pokemon
                             //BEGIN FIGHT LOOP
                             while (player.Hp > 0 && enemy.Hp > 0)
                             {
-                                //PRINT POSSIBLE MOVES //FIIIIIIIIIIIIIIIIIIIIIIIIXXXXXX
+                                //PRINT POSSIBLE MOVES ** DONE
+                                Console.WriteLine("What move should we use?: ");
                                 foreach (Move moves in player.Moves)
-                                    {
-                                        Console.WriteLine(moves.Name);
-                                    }
-                                
-                                Console.Write("What move should we use? (");
+                                {
+                                    Console.WriteLine("- " + moves.Name);
+                                }
 
                                 //GET USER ANSWER, BE SURE TO CHECK IF IT'S A VALID MOVE, OTHERWISE ASK AGAIN
-                                int move = -1;
+
+                                
+                                Move playerMove = null;
+                                bool moveChosen = false;
+
+                                bool wrongInput = false; 
+                                // Print wrong move the number of moves the pokemon have because of the for-loop. **Fix Later**
+                                do
+                                {
+                                    string whatToUse = Console.ReadLine();
+
+                                    for (int i = 0; i < player.Moves.Count; i++)
+                                    {
+
+                                        if (whatToUse.Equals(player.Moves[i].Name, StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            playerMove = player.Moves[i];
+                                            moveChosen = true;
+                                        }
+
+                                        else Console.WriteLine("Choose a valid move from the move pool");
+                                    }
+                                } 
+                                while (!moveChosen);
+
+                                //int move = 1;//
 
                                 //CALCULATE AND APPLY DAMAGE
-                                int damage = -1;
+                                //TEST DASDASDASFLKADFHAKLSJDHASKJLDHASKLJDHAKSDHALKJSDHLASKDHJASLKDHALKSDHLASDHJASDH
+                                Console.WriteLine(enemy.Hp);
+                                int damage = player.Attack(enemy);
+                                enemy.ApplyDamage(damage);
+                                Console.WriteLine(enemy.Hp);
 
                                 //print the move and damage
-                                Console.WriteLine(player.Name + " uses " + player.Moves[move].Name + ". " + enemy.Name + " loses " + damage + " HP");
+                                Console.WriteLine(player.Name + " uses " + playerMove.Name + ". " + enemy.Name + " loses " + damage + " HP");
 
                                 //if the enemy is not dead yet, it attacks
                                 if (enemy.Hp > 0)

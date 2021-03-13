@@ -67,10 +67,9 @@ namespace Pokemon
         /// <returns>The amount of damage that was applied so we can print it for the user</returns>
         public int Attack(Pokemon enemy)
         {
-            int damage = (enemy.baseAttack * enemy.level)* enemy.CalculateElementalEffects(baseAttack, Elements.Fire)-(enemy.baseDefence*enemy.level);
-            enemy.hp -= damage;
-
-            throw new NotImplementedException();
+            int damage = ((baseAttack * level)* CalculateElementalEffects(baseAttack, enemy.element))-(enemy.baseDefence*enemy.level);
+            
+            return damage;
         }
 
         /// <summary>
@@ -79,7 +78,8 @@ namespace Pokemon
         /// <returns> returns the amount of defence points considering the level as well</returns>
         public int CalculateDefence()
         {
-            throw new NotImplementedException();
+            int defence = level * baseDefence;
+            return defence;
         }
 
         /// <summary>
@@ -90,16 +90,44 @@ namespace Pokemon
         /// <returns>The damage post elemental-effect</returns>
         public int CalculateElementalEffects(int damage, Elements enemyType)
         {
-            throw new NotImplementedException();
+            float postDamage;
+            float effect = 0;
+
+            if (element == Elements.Fire)
+            {
+                if (enemyType == Elements.Fire) effect = 1;
+                else if (enemyType == Elements.Grass) effect = 2;
+                else if (enemyType == Elements.Water) effect = 0.5f;
+            }
+            else if (element == Elements.Grass)
+            {
+                if (enemyType == Elements.Fire) effect = 0.5f;
+                else if (enemyType == Elements.Grass) effect = 1;
+                else if (enemyType == Elements.Water) effect = 2;
+            }
+            else if (element == Elements.Water)
+            {
+                if (enemyType == Elements.Water) effect = 1;
+                else if (enemyType == Elements.Fire) effect = 2;
+                else if (enemyType == Elements.Grass) effect = 0.5f;
+            }
+            //(should not be possible)
+            else Console.WriteLine("No Elemental effect");
+
+            postDamage = effect * damage;
+                                               
+
+            return (Int32)postDamage;
         }
 
         /// <summary>
         /// Applies damage to the pokemon
         /// </summary>
         /// <param name="damage"></param>
+        /// 
         public void ApplyDamage(int damage)
         {
-            throw new NotImplementedException();
+            this.hp -= damage;
         }
 
         /// <summary>
@@ -107,7 +135,7 @@ namespace Pokemon
         /// </summary>
         public void Restore()
         {
-            hp = maxHp;
+            this.hp = maxHp;
         }
     }
 }
