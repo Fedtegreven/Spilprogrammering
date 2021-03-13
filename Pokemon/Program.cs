@@ -163,8 +163,12 @@ namespace Pokemon
                                      * rand.Next(X) 
                                      * where X is a number 
                                      */
-                                    int enemyMove = -1;
-                                    int enemyDamage = -1;
+                                    int enemyMove = rand.Next(0,enemy.Moves.Count);
+
+                                    int enemyDamage = enemy.Attack(player);
+                                    player.ApplyDamage(enemyDamage);
+
+                                   
 
                                     //print the move and damage
                                     Console.WriteLine(enemy.Name + " uses " + enemy.Moves[enemyMove].Name + ". " + player.Name + " loses " + enemyDamage + " HP");

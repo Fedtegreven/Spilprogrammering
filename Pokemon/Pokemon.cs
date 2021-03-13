@@ -67,7 +67,7 @@ namespace Pokemon
         /// <returns>The amount of damage that was applied so we can print it for the user</returns>
         public int Attack(Pokemon enemy)
         {
-            int damage = ((baseAttack * level)* CalculateElementalEffects(baseAttack, enemy.element))-(enemy.baseDefence*enemy.level);
+            int damage = CalculateElementalEffects(baseAttack * level, enemy.element)-(enemy.baseDefence*enemy.level);
             
             return damage;
         }
