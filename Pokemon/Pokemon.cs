@@ -67,10 +67,13 @@ namespace Pokemon
         /// <returns>The amount of damage that was applied so we can print it for the user</returns>
         public int Attack(Pokemon enemy)
         {
-            Console.WriteLine("Elemental damage: "+CalculateElementalEffects(baseAttack, enemy.element));
-            int damage = CalculateElementalEffects(baseAttack * level, enemy.element)-(enemy.baseDefence*enemy.level);
-            //base formula 
-           // int damage = baseAttack * level * CalculateElementalEffects(baseAttack, enemy.element) - (enemy.baseDefence * enemy.level);
+            //Console.WriteLine("Elemental damage: " + CalculateElementalEffects(baseAttack, enemy.element));
+            int damage = CalculateElementalEffects(baseAttack * level, enemy.element)-(enemy.CalculateDefence());
+            if (damage < 0)
+            {
+                damage = 0;
+            }
+
             enemy.ApplyDamage(damage);
 
             return damage;
@@ -93,6 +96,7 @@ namespace Pokemon
         /// <param name="damage">The amount of pre elemental-effect damage</param>
         /// <param name="enemyType">The elemental type of the enemy</param>
         /// <returns>The damage post elemental-effect</returns>
+        /// Same element battle possible for future implementation
         public int CalculateElementalEffects(int damage, Elements enemyType)
         {
             float postDamage;
@@ -133,6 +137,10 @@ namespace Pokemon
         public void ApplyDamage(int damage)
         {
             this.hp -= damage;
+            if(this.hp < 0)
+            {
+                this.hp = 0; 
+            }
         }
 
         /// <summary>

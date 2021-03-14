@@ -115,13 +115,9 @@ namespace Pokemon
                                     Console.WriteLine("- " + moves.Name);
                                 }
 
-                                //GET USER ANSWER, BE SURE TO CHECK IF IT'S A VALID MOVE, OTHERWISE ASK AGAIN
-
-                                
+                                //GET USER ANSWER, BE SURE TO CHECK IF IT'S A VALID MOVE, OTHERWISE ASK AGAIN ** DONE
                                 Move playerMove = null;
                                 bool moveChosen = false;
-
-                                bool wrongInput = false; 
                                 // Print wrong move the number of moves the pokemon have because of the for-loop. **Fix Later**
                                 do
                                 {
@@ -144,7 +140,6 @@ namespace Pokemon
                                 //int move = 1;//
 
                                 //CALCULATE AND APPLY DAMAGE
-                                //TEST DASDASDASFLKADFHAKLSJDHASKJLDHASKLJDHAKSDHALKJSDHLASKDHJASLKDHALKSDHLASDHJASDH
                                 Console.WriteLine("Enemy hp before: "+enemy.Hp);
                                 int damage = player.Attack(enemy);
                                 //enemy.ApplyDamage(damage);
