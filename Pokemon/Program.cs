@@ -28,7 +28,7 @@ namespace Pokemon
             List<Move> bulbasaurMoveSet = new List<Move> { cut, mega_drain,razor_leaf };
             //initialize the different pokemons
             Pokemon charmander = new Pokemon("Charmander", 3, 52, 43, 39, Elements.Fire, charmanderMoveSet);
-            Pokemon squirtle = new Pokemon("Squirtle", 3, 48, 65, 44, Elements.Water, squirtleMoveSet);
+            Pokemon squirtle = new Pokemon("Squirtle", 2, 48, 65, 44, Elements.Water, squirtleMoveSet);
             Pokemon bulbasaur = new Pokemon("Bulbasaur", 3, 49, 49, 45, Elements.Grass, bulbasaurMoveSet);
             //add pokemon to the rooster
             roster.Add(charmander);
@@ -145,10 +145,10 @@ namespace Pokemon
 
                                 //CALCULATE AND APPLY DAMAGE
                                 //TEST DASDASDASFLKADFHAKLSJDHASKJLDHASKLJDHAKSDHALKJSDHLASKDHJASLKDHALKSDHLASDHJASDH
-                                Console.WriteLine(enemy.Hp);
+                                Console.WriteLine("Enemy hp before: "+enemy.Hp);
                                 int damage = player.Attack(enemy);
-                                enemy.ApplyDamage(damage);
-                                Console.WriteLine(enemy.Hp);
+                                //enemy.ApplyDamage(damage);
+                                Console.WriteLine("Enemy hp After: "+enemy.Hp);
 
                                 //print the move and damage
                                 Console.WriteLine(player.Name + " uses " + playerMove.Name + ". " + enemy.Name + " loses " + damage + " HP");
@@ -164,9 +164,10 @@ namespace Pokemon
                                      * where X is a number 
                                      */
                                     int enemyMove = rand.Next(0,enemy.Moves.Count);
-
+                                    Console.WriteLine("player hp before: " + player.Hp);
                                     int enemyDamage = enemy.Attack(player);
-                                    player.ApplyDamage(enemyDamage);
+                                    Console.WriteLine("Player hp after: " + player.Hp);
+                                    //player.ApplyDamage(enemyDamage);
 
                                    
 
