@@ -67,7 +67,6 @@ namespace Pokemon
         /// <returns>The amount of damage that was applied so we can print it for the user</returns>
         public int Attack(Pokemon enemy)
         {
-            //Console.WriteLine("Elemental damage: " + CalculateElementalEffects(baseAttack, enemy.element));
             int damage = CalculateElementalEffects(baseAttack * level, enemy.element)-(enemy.CalculateDefence());
             if (damage < 0)
             {
