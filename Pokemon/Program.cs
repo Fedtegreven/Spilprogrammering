@@ -156,7 +156,7 @@ namespace Pokemon
                                 //if the enemy is not dead yet, it attacks
                                 if (enemy.Hp > 0)
                                 {
-                                    //CHOOSE A RANDOM MOVE BETWEEN THE ENEMY MOVES AND USE IT TO ATTACK THE PLAYER
+                                    //CHOOSE A RANDOM MOVE BETWEEN THE ENEMY MOVES AND USE IT TO ATTACK THE PLAYER**DONE
                                     Random rand = new Random();
                                     /*the C# random is a bit different than the Unity random
                                      * you can ask for a number between [0,X) (X not included) by writing
@@ -196,10 +196,8 @@ namespace Pokemon
                     
                         foreach (Pokemon pokemon in roster)
                         {
-
-
+                            pokemon.Restore();
                         }
-
                         Console.WriteLine("All pokemons have been healed");
                         break;
 
