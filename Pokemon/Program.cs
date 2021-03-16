@@ -86,13 +86,12 @@ namespace Pokemon
                                         enemy = roster[i];
                                         enemyChosen = true;
                                     }
-                                    if (i >= roster.Count && !enemyChosen || !playerChosen)
-                                    {
-                                        Console.WriteLine("Please enter 2 valid pokemons: ");
-                                    }
                                 }
                             }
-                            else Console.WriteLine("Please enter 2 valid pokemons: ");
+                            if (!enemyChosen || !playerChosen || splittetInput.Length > 2 || splittetInput.Length < 2)
+                            {
+                                Console.WriteLine("Please enter 2 valid pokemons (remember to spellcheck): ");
+                            }
                         }
                         while (!enemyChosen && !playerChosen);
 
@@ -126,8 +125,9 @@ namespace Pokemon
                                         {
                                             playerMove = player.Moves[i];
                                             moveChosen = true;
-                                        }
+                                        } 
                                     }
+                                    if (!moveChosen) Console.WriteLine("Please choose a valid move!!");
                                 } 
                                 while (!moveChosen);
 
