@@ -48,7 +48,7 @@ namespace Pokemon
                         Console.WriteLine("\nThe roster of pokemon includes the following: ");
                         foreach (Pokemon pokemon in roster)
                         {
-                            Console.WriteLine(pokemon.Name);
+                            Console.WriteLine(pokemon.Name + " : " + pokemon.Hp + " HP");
                         }
                         break;
 
