@@ -119,7 +119,7 @@ namespace Pokemon
                 else if (enemyType == Elements.Fire) effect = 2;
                 else if (enemyType == Elements.Grass) effect = 0.5f;
             }
-            //(should not be possible)
+            //(Should not be possible in this implemnetation, maybe this should just be the default for same elemental battle, but now it's already written)
             else Console.WriteLine("No Elemental effect");
 
             postDamage = effect * damage;
