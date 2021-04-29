@@ -38,9 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Buttom
+  - name: Water
+    uniqueID: 4095870655
+    locked: 0
+  - name: Ground
     uniqueID: 2079443995
+    locked: 0
+  - name: Encapsulation
+    uniqueID: 1520698587
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 1160394165
+    locked: 0
+  - name: TallGrass
+    uniqueID: 4082091661
+    locked: 0
+  - name: Player
+    uniqueID: 1046441805
     locked: 0
