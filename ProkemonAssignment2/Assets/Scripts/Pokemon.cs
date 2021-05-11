@@ -105,6 +105,7 @@ public class Pokemon
             //it's not so effective
             return damage / 2;
         }
+      
         return damage;
     }
 
