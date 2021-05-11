@@ -37,17 +37,23 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         
-        state = BattleState.START;
-        StartCoroutine(SetupBattle());
-        //AssingMoves();
-        //SetHud();
-        
+       // state = BattleState.START;
+       // StartCoroutine(SetupBattle());        
     }
 
    public IEnumerator SetupBattle()
     {
-       playerPokemon = PokemonFactory.Create(5, "charizard");
+        state = BattleState.START;
+
+       playerPokemon = PokemonFactory.Create(5, "Charizard");
        enemyPokemon = PokemonFactory.CreateRandom();
+
+        Move newMove;
+        newMove = new Move("Weee");
+
+        playerPokemon.moves.Add(newMove);
+
+
 
        dialogText.text = "A crazy " + enemyPokemon.name + " appeared";
 
@@ -73,12 +79,17 @@ public class BattleSystem : MonoBehaviour
             }
         }*/
 
-        foreach (Move item in playerPokemon.moves)
+        /*foreach (Move item in playerPokemon.moves)
         {
             foreach (Button itemButton in moveset)
             {
                 itemButton.GetComponentInChildren<Text>().text = item.name;
             }
+        }*/
+
+        for (int i = 0; i < playerPokemon.moves.Count; i++)
+        {
+            moveset[i].GetComponentInChildren<Text>().text = playerPokemon.moves[i].name;
         }
     }
 
@@ -162,12 +173,6 @@ public class BattleSystem : MonoBehaviour
 
         }
         else return;
-    }
-
-    public void StartRandomEncounter()
-    {
-
-
     }
 
     public void OnhealEnter()
