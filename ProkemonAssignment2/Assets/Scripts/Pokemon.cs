@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 
 /// <summary>
 /// The possible elemental types
@@ -70,6 +70,18 @@ public class Pokemon
             enemy.ApplyDamage(damage);
             return damage;
         }
+    }
+
+    public int DamageDone(Pokemon enemy)
+    {
+        //calculate attack
+        int attack = baseAttack * level;
+        attack = CalculateElementalEffects(attack, enemy.element);
+        int defence = enemy.CalculateDefence();
+        int damage = attack - defence;
+        if (damage < 0)
+            return 0;
+        return damage;
     }
 
     /// <summary>

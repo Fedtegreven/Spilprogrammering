@@ -7,7 +7,7 @@ using UnityEngine;
 
 class PokemonFactory
 {
-    public static Pokemon Create(int level, string name) //, Sprite[] pokeSprite
+    public static Pokemon Create(int level, string name)
     {
 
         // Let's parse the Pokedex.csv file to find the requested pokemon!
@@ -43,7 +43,7 @@ class PokemonFactory
 
     }
 
-    static Pokemon InstantiatePokemon(int level, String[] values)//, Sprite sprite
+    static Pokemon InstantiatePokemon(int level, String[] values)
     {
         // Get the element from the pokemon info
         Elements element;
@@ -84,6 +84,7 @@ class PokemonFactory
         // Split the line into values
         String[] values = randomLine.Split(',');
         // Initialize and return pokemon
+      
         
         return InstantiatePokemon(UnityEngine.Random.Range(1, 11), values); //, pokemonSprite
     }

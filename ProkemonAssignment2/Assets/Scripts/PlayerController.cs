@@ -4,44 +4,42 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //reference to the battlesystem, for starting a battle.
+    public BattleSystem battleStart;
+
+    //Variables for controlling the move and sprint speed
     public float normalSpeed;
     public float sprintSpeed;
     public float moveSpeed;
 
+    //Controlling movement
     public bool isMoving;
     public bool canMove;
     private Vector2 input;
 
+    //reference to the animator
     private Animator animatior;
 
     public LayerMask solidObjectsLayer;
 
+    //Check for tallgrass layer, used for pokemon encounter
     public LayerMask tallGrassLayer;
+    //The cance for encounter, canged in the inspector
     public int encounterChance;
-
-
-    public Camera battleCam;
-
-    public GameObject battle;
-    
 
     // Start is called before the first frame update
     void Start()
     {
         canMove = true;
-        battleCam.enabled = false;
-        //battle.SetActive(false);
         sprintSpeed = normalSpeed + 2;
         moveSpeed = normalSpeed;
         animatior = GetComponent<Animator>();
-    
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //for sprint
-        if (Input.GetKey(KeyCode.LeftShift)&&canMove) moveSpeed = sprintSpeed;
+    {        //for sprinting
+        if (Input.GetKey(KeyCode.LeftShift) && canMove) moveSpeed = sprintSpeed;
         else moveSpeed = normalSpeed;
 
         if (!isMoving)
@@ -64,20 +62,9 @@ public class PlayerController : MonoBehaviour
                 //if true, call the coroutine "Move"
                 if(IsWalkable(targetPos) && canMove)
                 StartCoroutine(Move(targetPos));
-
             }
-
         }
         animatior.SetBool("isMoving", isMoving);
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            battleCam.enabled = false;
-            //battle.SetActive(false);
-            canMove = true;
-        }
-
     }
 
     //coroutine used for moving the player
@@ -105,7 +92,6 @@ public class PlayerController : MonoBehaviour
         {
             return false;
         }
-
         return true;
     }
 
@@ -119,24 +105,15 @@ public class PlayerController : MonoBehaviour
         {
             if(Random.Range(1,100 +1) <= encounterChance)
             {
-                Pokemon pokemon = PokemonFactory.CreateRandom();
-                Debug.Log("Encountered: " + pokemon.name);
                 BattleEncounter();
-
             }
         }
     }
 
-    public BattleSystem battleStart;
+    // start the battle, called in CheckForEncounter
     void BattleEncounter()
     {
         canMove = false;
-        
-        //walkCam.enabled = false;
-        //battle.SetActive(true);
-        battleCam.enabled = true;
-
         StartCoroutine(battleStart.SetupBattle());
-
     }
 }
